@@ -18,7 +18,7 @@ template <class Type>
 class Array
 {
 private:
-Type: * intenral Array;
+Type: * internal Array;
     int size;
 public:
     //Constructor
@@ -70,6 +70,63 @@ Array<Type> :: ~Array()
     delete [] internalArray;
 }
 
+template <class Type>
+Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
+{
+    if (&toAssign != this)
+    {
+        if (size != toAssign.getSize())
+        {
+            delete [] internalArray;
+            size = toAssign.getSize();
+            internalArray = new Type [size];
+        }
+        
+        for (int index = 0; index < size; index++)
+        {
+            internalArray[index] = toAssign[index];
+        }
+        
+        
+    }
+    return *this;
+}
 
+template <class Type>
+Type & Array<Type> :: operator [] (int index)
+{
+    assert(index >= 0 && index < size);
+    return internalArray[index];
+}
 
-#endif /* Array_h */
+template <class Type>
+Type Array<Type> :: operator [] (int index) const
+{
+    assert(index >= 0 && index < size);
+    return internalArray[index];
+}
+
+template <class Type>
+int Array<Type> :: getSize() const
+{
+    return size;
+}
+
+template <class Type>
+Type Array<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < size);
+    
+    Type value = internalArray[index];
+    
+    return value;
+}
+
+template <class Type>
+void Array<Type> :: setAtIndex(int pos, Type item)
+{
+    assert(pos >= 0 && pos < size);
+    internal Array[pos] = item;
+}
+
+#endif /* Array_hpp */
