@@ -8,19 +8,20 @@
 
 #include "Controller.hpp"
 
-Controller :: Controller()
-{
-    this -> specialNumber = 123456;
-}
 
 void Controller :: start()
 {
-    cout << "This is inside the start method" << endl;
-    cout << "this is how you access a variable: " << specialNumber << endl;
-    cout << "seperate chunks with the << just like a + and Strings in Java" << endl;
-    specialNumber = 123;
-    string answer;
-    cout << "Type in your name" << endl;
-    getline(cin, answer);
-    cout << "you typed: " << answer << endl;
+    cout << " Welcome to the data structures app" << endl;
+    usingNodes();
+}
+
+void Controller :: usingNodes()
+{
+    LinearNode<int> mine(5);
+    LinearNode<string> wordHolder("words can be stored too");
+    cout << mine.getData() << endl;
+    cout << wordHolder.getData() << endl;
+    wordHolder.setData("replaced text");
+    cout << wordHolder.getData() << endl;
+    
 }
