@@ -12,14 +12,18 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "FileController.hpp"
 using namespace std;
 
 class Controller
 {
+    
+
 private:
     void usingNodes();
 public:
     void start();
+    void testFiles();
 };
 
 #endif /* Controller_hpp */
