@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "../Resources/CrimeData.hpp"
+#include "../Resources/Music.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
