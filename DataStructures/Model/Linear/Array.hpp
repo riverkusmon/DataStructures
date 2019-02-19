@@ -18,7 +18,7 @@ template <class Type>
 class Array
 {
 private:
-Type: * internal Array;
+    Type * internalArray;
     int size;
 public:
     //Constructor
@@ -38,7 +38,7 @@ public:
     int getSize() const;
     Type getFromIndex(int index);
     void setAtIndex(int index, Type data);
-}
+};
 
 template <class Type>
 Array<Type> :: Array(int size)
@@ -126,7 +126,7 @@ template <class Type>
 void Array<Type> :: setAtIndex(int pos, Type item)
 {
     assert(pos >= 0 && pos < size);
-    internal Array[pos] = item;
+    internalArray[pos] = item;
 }
 
 #endif /* Array_hpp */

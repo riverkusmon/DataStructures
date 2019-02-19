@@ -23,6 +23,7 @@ using namespace std;
 
 class FileController
 {
+public:
     static vector<CrimeData> readCrimeDataToVector(string filename);
     static LinkedList<CrimeData> readDataToList(string filename);
     //static BinarySearchTree<CrimeData> readDataToTree(string filename);

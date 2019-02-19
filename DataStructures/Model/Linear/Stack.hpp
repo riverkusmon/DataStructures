@@ -16,7 +16,7 @@ class Stack : public LinkedList<Type>
 {
 public:
     Stack();
-    ~Stacke();
+    ~Stack();
     
     //Stack specific methods
     void push(Type data);
@@ -28,7 +28,7 @@ public:
     void addAtIndex(int index, Type data);
     Type getFromIndex(int index);
     Type remove(int index);
-    
+};
     template <class Type>
     Stack<Type> :: Stack() : LinkedList<Type>()
     {
@@ -110,7 +110,7 @@ public:
         assert(index == 0);
         return peek();
     }
-}
+
 
 
 #endif /* Header_h */

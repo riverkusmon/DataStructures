@@ -24,6 +24,6 @@ class LinearTester
 {
 public:
     void testVsSTL();
-}
+};
 
 #endif /* LinearTester_hpp */

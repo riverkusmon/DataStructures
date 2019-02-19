@@ -6,12 +6,14 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
-#inlcude "List.hpp"
 
-using namespace std;
 
 #ifndef LinkedList_hpp
 #define LinkedList_hpp
+
+#include "List.hpp"
+
+using namespace std;
 
 template <class Type>
 class LinkedList : public List<Type>
@@ -38,14 +40,15 @@ public:
     Type remove(int index);
     
     bool contains(Type item);
-    
+};
+    template <class Type>
     LinkedList<Type> :: LinkedList()
     {
         this->front = nullptr;
-        this->end = nullprt;
+        this->end = nullptr;
         this->size = 0;
     }
-    
+    template <class Type>
     LinkedList<Type> :: ~LinkedList()
     {
         LinearNode<Type> * destroyStructure = front;
@@ -56,7 +59,7 @@ public:
             destroyStructure = front;
         }
     }
-    
+    template <class Type>
     void LinkedList<Type> :: add(Type item)
     {
         LinearNode<Type> * newData = new LinearNode<Type>(item);
@@ -74,7 +77,7 @@ public:
         
         this->size += 1;
     }
-    
+    template <class Type>
     void LinkedList<Type> :: addAtIndex(int index, Type item)
     {
         assert(index >= 0 && index <= this->size);
@@ -105,6 +108,7 @@ public:
             this->size++;
         }
     }
+    template <class Type>
     Type LinkedList<Type> :: getFromIndex(int index)
     {
         assert(index >= 0 && index < this->size);
@@ -132,7 +136,7 @@ public:
         for(int index = 0; index < getSize(); index++)
         {
             
-            if (searchPointer->getData == thingTofind)
+            if (searchPointer->getData == thingToFind)
             {
                 return true;
             }
@@ -140,7 +144,7 @@ public:
         }
         return exists;
     }
-    
+    template <class Type>
     Type LinkedList<Type> :: remove(int index)
     {
         assert(index >= 0 && index < this->size);
@@ -184,22 +188,21 @@ public:
         delete toBeRemoved;
         return removedData;
     }
-    
+    template <class Type>
     LinearNode<Type> * LinkedList<Type> :: getEnd()
     {
         return this->end;
     }
-    
+    template <class Type>
     LinearNode<Type> * LinkedList<Type> :: getFront()
     {
         return this->front;
     }
-    
+    template <class Type>
     int LinkedList<Type> :: getSize() const
     {
-        return this->size;s
+        return this->size;
     }
     
-}
 
 #endif /* LinkedList_h */

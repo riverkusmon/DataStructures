@@ -16,6 +16,7 @@ using namespace std;
 
 template <class Type>
 class Queue : public LinkedList<Type>
+{
 
 public:
 Queue();
@@ -32,7 +33,7 @@ void add(Type data);
 void addAtIndex(int index, Type data);
 Type getFromIndex(int index);
 Type remove(int index);
-
+};
 template <class Type>
 Queue<Type> :: Queue() : LinkedList<Type>()
 {
@@ -47,7 +48,7 @@ Queue<Type> :: ~Queue()
         this->front = removed->getNextNode();
         delete removed;
     }
-    
+}
     template <class Type>
     void Queue<Type> :: enqueue(Type item)
     {
@@ -108,7 +109,7 @@ Queue<Type> :: ~Queue()
     {
         while(this->front != nullptr)
         {
-            cout << dequeue() << endl
+            cout << dequeue() << endl;
         }
     }
     template <class Type>
@@ -124,6 +125,6 @@ Queue<Type> :: ~Queue()
         assert(index == 0);
         return peek();
     }
-}
+
 
 #endif /* Queue_hpp */
