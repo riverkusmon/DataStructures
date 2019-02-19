@@ -12,7 +12,7 @@
 void Controller :: start()
 {
     cout << " Welcome to the data structures app" << endl;
-    usingNodes();
+    testLinear();
 }
 
 void Controller :: usingNodes()
@@ -24,15 +24,11 @@ void Controller :: usingNodes()
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
     
-    vector<Music> tunez = FileController :: musicDataToVector("/Users/agar7800/C++ Projects/DataStructures/DataStructures/Resources/music.csv");
 }
 
-void Controller :: testFiles()
+void Controller :: testLinear()
 {
-    for(int i = 234; i < 256; i++)
-    {
-        cout << index << ": contents are: " << musicDataToVector[i] << endl;
-        
-    }
+    LinearTester lookieHere;
+    lookieHere.testVsSTL();
     
 }
