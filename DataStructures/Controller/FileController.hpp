@@ -10,10 +10,10 @@
 #define FileController_hpp
 
 #include <stdio.h>
-#include "../Resources/CrimeData.hpp"
-#include "../Resources/Music.hpp"
-#include "../Model/Linear/Array.hpp"
-#include "../Model/Linear/LinkedList.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Resources/CrimeData.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Resources/Music.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Model/Linear/Array.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Model/Linear/LinkedList.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
