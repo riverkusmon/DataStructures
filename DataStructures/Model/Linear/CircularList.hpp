@@ -6,6 +6,7 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
+
 #ifndef CircularList_hpp
 #define CircularList_hpp
 
@@ -76,7 +77,7 @@ DoubleNode<Type> * CircularList<Type> :: findNode(int index)
     return nodeToFind;
 }
 
-templatet <class Type>
+template <class Type>
 void CircularList<Type> :: add(Type item)
 {
     DoubleNode<Type> * addedNode;
@@ -84,13 +85,15 @@ void CircularList<Type> :: add(Type item)
     {
         addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
+        this->end = addedNode;
+        this->end->setNext(addedNode);
     }
     else
     {
         addedNode = new DoubleNode<Type>(item, this->end, this->front);
+        this->end->setNext(addedNode);
     }
     
-    this->end->setNext(addedNode);
     this->front->setPrevious(addedNode);
     this->end = addedNode;
     this->size++;
@@ -174,7 +177,7 @@ Type CircularList<Type> :: setAtIndex(int index, Type item)
     return replaced
 }
 
-tempate <class Type>
+template <class Type>
 int CircularList<Type> :: getSize() const
 {
     return this->size;

@@ -2,7 +2,7 @@
 //  Queue.hpp
 //  DataStructures
 //
-//  Created by Thomas, Gavin on 2/11/19.
+//  Created by Gardner, Andrew on 2/11/19.
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
