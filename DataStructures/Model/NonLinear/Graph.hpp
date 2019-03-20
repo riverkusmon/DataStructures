@@ -12,10 +12,12 @@
 #include <set>
 #include <queue>
 #include <assert.h>
+#include <iostream>
 
 using namespace std;
 template <class Type>
 class Graph
+{
 
 private:
 static const int MAXIMUM = 50;
@@ -54,7 +56,7 @@ std::set<int> neighbors(int vertex) const;
 void depthFirstTraversal(Graph<Type> & graph, int vertex);
 void breadthFirstTraversal(Graph<Type> & graph, int vertex);
 int costTraversal(Graph<Type> & graph, int vertex);
-
+};
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
 
@@ -62,6 +64,12 @@ template <class Type>
 Graph<Type> :: Graph()
 {
     this->vertexCount = 0;
+    
+    for (int index = 0; index < MAXIMUM; index++)
+    {
+        int * row = weightCostMatrix[index];
+        std::fill_n(row, MAXIMUM, 0);
+    }
 }
 
 /*
@@ -112,7 +120,7 @@ void Graph<Type> :: addVertex(const Type& value)
 template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
-    assert(source >= 0 && source < vertexCount && target >= && target < vertexCount);
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = true;
 }
 
@@ -241,7 +249,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
         connections = currentGraph.neighbors(vertexQueue.front());
         vertexQueue.pop();
         
-        for(setItertator = connections.begin(); setIterator != connections.end(); setIterator++)
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
         {
             if(!visited[*setIterator])
             {
@@ -256,7 +264,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
 template<class Type>
 int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
 {
-    assert(start >= 0f && start < vertexCount);
+    assert(start >= 0 && start < vertexCount);
     int cost = 0;
     bool visited[MAXIMUM];
     std::set<int> connections;
@@ -279,7 +287,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
             {
                 cost += weightCostMatrix[currentIndex][*setIterator];
                 visited[*setIterator] = true;
-                vertexQueue.push(*setIterator);f
+                vertexQueue.push(*setIterator);
             }
         }
     }
