@@ -12,22 +12,39 @@
 void GraphTester :: testGraphs()
 {
     setup();
-    compareTraversals();
     findCheapestTraversal();
+    //compareTraversals();
+    
 }
 
 void GraphTester :: compareTraversals()
 {
     
-    for(int i = 0; i < Graph<Type>.size(); i++)
-    {
-        
-    };
+//    for(int i = 0; i < puzzle.size(); i++)
+//    {
+//        puzzle.depthFirstTraversal(puzzle, i);
+//
+//    }
+//    for(int i = 0; i < puzzle.size(); i++)
+//    {
+//
+//        puzzle.breadthFirstTraversal(puzzle, i);
+//    }
 }
 
 void GraphTester :: findCheapestTraversal()
 {
-    
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.costTraversal(puzzle, i);
+        puzzle.breadthFirstTraversal(puzzle, i);
+        int count = 20;
+        if (puzzle.costTraversal(puzzle, i) < count)
+        {
+            count = puzzle.costTraversal(puzzle, i);
+        }
+        return count;
+    }
 }
 
 void GraphTester :: setup()

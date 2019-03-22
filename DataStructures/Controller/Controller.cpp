@@ -12,7 +12,8 @@
 void Controller :: start()
 {
     cout << " Welcome to the data structures app" << endl;
-    testLinear();
+    
+    testGraph();
 }
 
 void Controller :: usingNodes()
@@ -23,6 +24,14 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
+    
+}
+
+void Controller :: testGraph()
+{
+GraphTester lookieHere;
+
+lookieHere.testGraphs();
     
 }
 

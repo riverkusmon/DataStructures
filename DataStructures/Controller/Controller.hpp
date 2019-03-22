@@ -14,6 +14,7 @@
 #include "../Model/Nodes/LinearNode.hpp"
 #include "FileController.hpp"
 #include "../Testers/LinearTester.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Testers/GraphTester.hpp"
 using namespace std;
 
 class Controller
@@ -23,6 +24,7 @@ class Controller
 private:
     void usingNodes();
     void testLinear();
+    void testGraph();
 public:
     void start();
     void testFiles();
