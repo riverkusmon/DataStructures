@@ -34,17 +34,25 @@ void GraphTester :: compareTraversals()
 
 void GraphTester :: findCheapestTraversal()
 {
+    int index = 0;
+    int cost = 10000;
+    
     for(int i = 0; i < puzzle.size(); i++)
     {
         puzzle.costTraversal(puzzle, i);
-        puzzle.breadthFirstTraversal(puzzle, i);
-        int count = 20;
-        if (puzzle.costTraversal(puzzle, i) < count)
+        
+        
+        
+        if (puzzle.costTraversal(puzzle, i) < cost && puzzle.costTraversal(puzzle, i) != 0)
         {
-            count = puzzle.costTraversal(puzzle, i);
+            index = i;
+            cost = puzzle.costTraversal(puzzle, i);
         }
-        return count;
+        
     }
+    cout << index << endl;
+    cout << cost << endl;
+    cout << " " << endl;
 }
 
 void GraphTester :: setup()
