@@ -13,7 +13,7 @@
 
 template <class Type>
 class DoubleNode : public Node<Type>
-
+{
 protected:
 DoubleNode<Type> * previous;
 DoubleNode<Type> * next;
@@ -28,7 +28,7 @@ DoubleNode<Type> * getNext();
 
 void setPrevious(DoubleNode<Type> * previous);
 void setNext(DoubleNode<Type> * next);
-
+};
 template <class Type>
 DoubleNode<Type> :: DoubleNode() : Node<Type>()
 {
