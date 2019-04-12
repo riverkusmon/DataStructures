@@ -49,6 +49,9 @@
 		E5DA2BAB2214AF3000E351C8 /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTester.cpp; sourceTree = "<group>"; };
 		E5DA2BAC2214AF3000E351C8 /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearTester.hpp; sourceTree = "<group>"; };
 		E5DE201C22610FCE00BB0002 /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
+		E5DE201D226117EA00BB0002 /* BinaryTreeTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeTester.h; sourceTree = "<group>"; };
+		E5DE201E2261183D00BB0002 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
+		E5DE201F22611B5400BB0002 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		E5EC47E322120EBD000006F5 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		E5EC47E4221212D7000006F5 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		E5F6897E22247C0E00946065 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E5057904222DC3BD009C8339 /* Graph.hpp */,
+				E5DE201E2261183D00BB0002 /* BinarySearchTree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
@@ -145,6 +149,7 @@
 				E56CC07222022719009C5CAB /* LinearNode.hpp */,
 				E5F6897E22247C0E00946065 /* DoubleNode.hpp */,
 				E5DE201C22610FCE00BB0002 /* BinaryTreeNode.hpp */,
+				E5DE201F22611B5400BB0002 /* Tree.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				E5DA2BAC2214AF3000E351C8 /* LinearTester.hpp */,
 				E547E4E02242D2DE00C9B8C5 /* GraphTester.hpp */,
 				E547E4E12242D42700C9B8C5 /* GraphTester.cpp */,
+				E5DE201D226117EA00BB0002 /* BinaryTreeTester.h */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
