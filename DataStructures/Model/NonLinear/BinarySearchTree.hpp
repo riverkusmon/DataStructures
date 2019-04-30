@@ -6,10 +6,11 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
+#include "Tree.hpp"
 #ifndef BinarySearchTree_hpp
 #define BinarySearchTree_hpp
 
-#include "Tree.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -70,12 +71,6 @@ template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
     
-}
-
-
-template <class Type>
-void BinarySearchTree<Type> :: remove(Type item)
-{
 }
 
 template <class Type>
@@ -397,6 +392,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
         delete temp;
     }
 }
+
 else
 {
     current = getRightMostChiild(removeMe_>getLeftNode());
@@ -425,28 +421,28 @@ if(removeMe == nullptr || removeMe->getRootNode() == nullptr)
 }
 
 template <class Type>
-BinaryTreeNode<Type> * BinarySearchTree<Type> :: getleftMostChild(BinaryTreeNode<Type> * startintNode)
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
 {
     BinaryTreeNode<Type> * currentNode = startingNode;
     BinaryTreeNode<Type>* previous = nullptr;
     while (currentNode != nullptr)
     {
         previous = currentNode;
-        curreentNode = currentNode->getleftNode();
+        currentNode = currentNode->getleftNode();
     }
     
     return previous;
 }
 
 template <class Type>
-BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * startintNode)
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * startingNode)
 {
     BinaryTreeNode<Type> * currentNode = startingNode;
     BinaryTreeNode<Type>* previous = nullptr;
     while (currentNode != nullptr)
     {
         previous = currentNode;
-        curreentNode = currentNode->getRightNode();
+        currentNode = currentNode->getRightNode();
     }
     
     return previous;
@@ -460,7 +456,7 @@ Type BinarySearchTree<Type> :: findMaximum()
 }
 
 template<class Type>
-TypeBinarySearchTree<Type> :: findMinimum()
+Type BinarySearchTree<Type> :: findMinimum()
 {
     assert(this->root != nullptr);
     return getleftMostChild(this->root)->getData();

@@ -41,6 +41,7 @@
 		E5556DCB21FF8C390004C1BF /* Controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		E5556DCC21FF8C390004C1BF /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		E5556DCF21FF917A0004C1BF /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		E55E05CB2278C44200375FD4 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		E56CC07222022719009C5CAB /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		E56CC07422023A30009C5CAB /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		E5885D902268F99300046084 /* BinaryTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTreeTester.cpp; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 			children = (
 				E5057904222DC3BD009C8339 /* Graph.hpp */,
 				E5DE201E2261183D00BB0002 /* BinarySearchTree.hpp */,
+				E55E05CB2278C44200375FD4 /* AVLTree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";

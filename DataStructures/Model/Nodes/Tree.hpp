@@ -5,10 +5,11 @@
 //  Created by Gardner, Andrew on 4/12/19.
 //  Copyright © 2019 CTEC. All rights reserved.
 //
-
+#include "BinaryTreeNode.hpp"
 #ifndef Tree_hpp
 #define Tree_hpp
-#include "BinaryTreeNode.hpp"
+
+
 
 template <class Type>
 class Tree
