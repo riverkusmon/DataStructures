@@ -11,7 +11,6 @@
 
 #include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Model/Nodes/BinaryTreeNode.hpp"
 #include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Model/NonLinear/BinarySearchTree.hpp"
-#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Model/NonLinear/BinarySearchTree.hpp"
 
 class BinaryTreeTester
 {
@@ -19,9 +18,6 @@ private:
     BinaryTreeNode<int> testNode;
     BinarySearchTree<int> testTree;
 public:
-    void treeStuff();
     void doTreeStuff();
-    
-
 };
 #endif /* BinaryTreeTester_h */

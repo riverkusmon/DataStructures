@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "BinaryTreeTester.hpp"
 
+
 void BinaryTreeTester :: doTreeStuff()
 {
     testTree.insert(7);
@@ -24,6 +25,10 @@ void BinaryTreeTester :: doTreeStuff()
     testTree.insert(101);
     
     testTree.inOrderTraversal();
+    
+    testTree.getHeight();
+    testTree.isBalanced();
+    testTree.isComplete();
     testTree.preOrderTraversal();
     testTree.postOrderTraversal();
 }
