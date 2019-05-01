@@ -14,7 +14,8 @@
 #include "../Model/Nodes/LinearNode.hpp"
 #include "FileController.hpp"
 #include "../Testers/LinearTester.hpp"
-#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Testers/GraphTester.hpp"
+//#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Testers/GraphTester.hpp"
+#include "/Users/agar7800/C++ Projects/DataStructures/DataStructures/Testers/BinaryTreeTester.hpp"
 using namespace std;
 
 class Controller

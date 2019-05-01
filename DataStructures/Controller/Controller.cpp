@@ -29,9 +29,13 @@ void Controller :: usingNodes()
 
 void Controller :: testGraph()
 {
-GraphTester lookieHere;
-
-lookieHere.testGraphs();
+    BinaryTreeTester lookiehere;
+    
+    lookiehere.doTreeStuff();
+    
+//GraphTester lookieHere;
+//
+//lookieHere.testGraphs();
     
 }
 

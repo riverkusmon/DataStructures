@@ -6,11 +6,11 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
-#include "Tree.hpp"
+
 #ifndef BinarySearchTree_hpp
 #define BinarySearchTree_hpp
 
-
+#include "Tree.hpp"
 #include <iostream>
 
 using namespace std;
