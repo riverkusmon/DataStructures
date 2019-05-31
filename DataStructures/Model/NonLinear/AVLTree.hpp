@@ -16,8 +16,8 @@ template <class Type>
 class AVLTree : public BinarySearchTree<Type>
 {
 private:
-    BinaryTreeNode<Type> * leftRotation (BinaryTreeNode<Type> * parent);
-    BinaryTreeNode<Type> * rightRotation(BinaryTreeNode<Type> * parent);
+    BinaryTreeNode<Type> * leftHeavyRotation (BinaryTreeNode<Type> * parent);
+    BinaryTreeNode<Type> * rightHeavyRotation(BinaryTreeNode<Type> * parent);
     BinaryTreeNode<Type> * leftRightRotation(BinaryTreeNode<Type> * parent);
     BinaryTreeNode<Type> * rightLeftRotation(BinaryTreeNode<Type> * parent);
     
@@ -142,7 +142,7 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
     {
         if(heightDifference(parent->getLeftChild()) > 0)
         {
-            parent = leftRotation(parent);
+            parent = leftHeavyRotation(parent);
         }
         else
         {
@@ -157,7 +157,7 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
         }
         else
         {
-            parent = rightRotation(parent);
+            parent = rightHeavyRotation(parent);
         }
     }
     
@@ -165,7 +165,7 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
 }
 
 template <class Type>
-BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation (BinaryTreeNode<Type> * parent)
+BinaryTreeNode<Type> * AVLTree<Type> :: leftHeavyRotation (BinaryTreeNode<Type> * parent)
 {
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getLeftChild();
@@ -179,7 +179,7 @@ BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation (BinaryTreeNode<Type> * par
 }
 
 template <class Type>
-BinaryTreeNode<Type> * AVLTree<Type> :: rightRotation (BinaryTreeNode<Type> * parent)
+BinaryTreeNode<Type> * AVLTree<Type> :: rightHeavyRotation (BinaryTreeNode<Type> * parent)
 {
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getRightChild();
@@ -198,9 +198,9 @@ BinaryTreeNode<Type> * AVLTree<Type> :: rightLeftRotation (BinaryTreeNode<Type> 
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getRightChild();
     
-    parent->setRightChild(leftRotation(changedNode));
+    parent->setRightChild(leftHeavyRotation(changedNode));
     
-    return rightRotation(parent);
+    return rightHeavyRotation(parent);
 }
 
 template <class Type>
@@ -209,9 +209,9 @@ BinaryTreeNode<Type> * AVLTree<Type> :: leftRightRotation (BinaryTreeNode<Type> 
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getLeftChild();
     
-    parent->setLeftChild(rightRotation(changedNode));
+    parent->setLeftChild(rightHeavyRotation(changedNode));
     
-    return leftRotation(parent);
+    return leftHeavyRotation(parent);
 }
 
 #endif /* AVLTree_hpp */
